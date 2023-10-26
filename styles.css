@@ -1,0 +1,31 @@
+.grid-container {
+    display: grid;
+    gap: 50px 100px;
+      /* style the columns and rows here */
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 100px 100px;
+}
+
+#nav{
+    grid-column: span 3
+}
+
+#img{
+    grid-column: span 3;
+}
+
+#main{
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+#right{
+    grid-column-start: 3;
+    grid-row-start: span 2;
+}
+#previous{
+    grid-column: span 3;
+}
+
+
+
