@@ -7,57 +7,37 @@
     <title>Document</title>
     <link rel = "stylesheet" href="styles.css">
 </head>
-<script>
-    const content = document.querySelector("#content");
-    content.addEventListener("click"), () => {
-        document.getElementById("#content");
-    }
-</script>
-<body>
+    <!--Nav Bar -->
+    <div class = "topnav">
+        <a href="index.html"> Home </a>
+        <a href="events.html"> Events </a>
+        <a href="guest.html"> Guest </a>
+    </div>
+    <!-- schedule -->
+    <div class="schedule">
+        <div class="scheduleItem" onclick="toggleAccordion(1)">
+            <span>Day 1</span>
+            <span id="arrow1">▶</span>
+        </div>
+        <div class="scheduleContent" id="content1">
+            Content for Day 1 goes here.
+        </div>
+        <div class="scheduleItem" onclick="toggleAccordion(2)">
+            <span>Day 2</span>
+            <span id="arrow2">▶</span>
+        </div>
+        <div class="scheduleContent" id="content2">
+            Content for Day 2 goes here.
+        </div>
+        <div class="scheduleItem" onclick="toggleAccordion(3)">
+            <span>Day 3</span>
+            <span id="arrow3">▶</span>
+        </div>
+        <div class="scheduleContent" id="content3">
+            Content for Day 3 goes here.
+        </div>
+    </div>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="guest.html">Guest</a></li> 
-      </ul>
-
-    <div id="Day 1" class="date">
-        <button>Day 1</button>
-         <div id = "content">
-        <h2>Timeline</h2>
-        <p>Content</p>
-        <h3>
-            <ul>
-                <li>time: </li>
-            </ul>
-        </h3>
-    </div>
-      </div>
-      <div id="Day 2" class="date">
-        <button>Day 2</button>
-        <div id = "content">
-        <h2>Timeline</h2>
-        <p >Content</p>
-        <h3>
-            <ul>
-                <li>time: </li>
-            </ul>
-        </h3>
-    </div>
-      </div>
-      <div id="Day 3" class="date">
-        <button>Day 3</button>
-        <div id = "content">
-        <h2>Timeline</h2>
-        <p>Content</p>
-        <h3>
-            <ul>
-                <li>time: </li>
-            </ul>
-        </h3>
-    </div>
-      </div>
-    
       <script src = "convention.js"></script> 
       
 </body>
