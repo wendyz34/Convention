@@ -1,6 +1,7 @@
 body, h1, h2, h3, h4, p {
     margin: 0;
     padding: 0;
+    font-size: large;
 }
 
 body {
@@ -99,7 +100,7 @@ body {
 }
 
 .scheduleItem:hover {
-    background-color: #f0f0f0; /* Reverting to previous hover color */
+    background-color: #f0f0f0; 
 }
 
 .scheduleContent {
@@ -111,7 +112,7 @@ body {
 .scheduleItem #arrow2,
 .scheduleItem #arrow3 {
     font-size: 20px;
-    margin-right: 10px; /* Adding space between arrow and text */
+    margin-right: 10px; 
 }
 
 .scheduleItem.active + .scheduleContent {
@@ -133,7 +134,7 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #9687a3;
+    background-color: #67aae0;
 }
 
 th, td {
@@ -156,18 +157,29 @@ img {
 }
 
 /* Guest Section */
-.guest {
-    background-color: #f3e5f5; /* Lavender background color */
-    padding: 20px;
+table {
+    border-collapse: separate;
+    border-width: 10px; 
+    border-style: inset;
+    border-color: #96acd4;
+    width: 100%;
 }
 
-.guest th, .guest td {
-    padding: 10px;
+th, td {
+    color: #fff; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px;
+    padding: 15px; 
 }
 
-.guest h2, .guest h3, .guest h4 {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-    font-size: 18px; /* Adjust font size as needed */
+th[colspan="2"] {
+    font-size: 24px; 
+    text-align: center; 
 }
+
+
+
+
+
+
+
