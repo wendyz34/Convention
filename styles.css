@@ -15,6 +15,8 @@ body {
 .topnav {
     background-color: #4a90e2;
     overflow: hidden;
+    grid-column: span 3;
+    grid-row: 1;
 }
 
 .topnav a {
@@ -34,85 +36,175 @@ body {
 /* Index Page */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto auto auto auto;
     /* gap: 10px; */
 }
-
-#nav {
-    grid-column: span 3;
+.grid-item{
+    text-align: center;
 }
+
+/* #nav {
+    grid-column: span 3;
+} */
+
 
 #img {
-    grid-column: span 1;
-}
-
-.container {
+    grid-column: span 3;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    border-radius: 25px;
-    margin-right: 30%;
-    margin-left: 30%;
+    position: relative;
+   
+}
+/* Top image */
+#pic{
+    width: 100%;
+    height:auto;
+    grid-column: span 1;
+
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(217, 246, 255, 0.7); /*color and opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+   
+  }
+ 
+  #img:hover .overlay {
+    opacity: 1;
+}
+  
+  .text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 70px;
+    font-family: Helvetica;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  
+
+
+.title{
+    background-color: #4a90e2;
+    margin-bottom: 30px;
+    font-family: Helvetica;
+    padding: 10px;
+    text-align: center;
+    font-size:xx-large;
+    color: white;
+}
+
+/* What is KCON */
+#main {
+    /* text-align:left; */
+    grid-column: span 2 ; 
+    grid-row-start: 2;
+    margin-top: 50px; 
+    background-color: navy;
+    color: white;
+    padding: 20px
+    
+}
+
+#right {
+  
+    grid-row-start: 2;
+    grid-column: span 1;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: navy;
+}
+
+#concert{
+    width: 250px;
+    height: auto;
+   
+}
+
+.location {
+    grid-column: span 3; /* column span to 3 to center the text */
+    text-align: center; 
+    background-color: #f3f3f3; 
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: Helvetica;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #357abf;
+}
+#location {
+    margin: 0; /* Removes default margin for the p element */
+    text-align: center;
+}
+/* LA PHOTOS */
+#previous {
+    grid-column: span 2;
+    margin-top: 80px;
+    background-color: navy;
+    padding: 20px;
+    margin-left: 40px;
+    
+}
+
+.LA{
+    color: white;
+    font-size: 50px;
+}
+
+.photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f3f3f3;
+    /* margin-right: 30%;
+    margin-left: 30%; */
 }
 
 
-#kcon{
+#kcon-photo{
   
     /* height: auto;
     width:150px; */
     max-width: 100%;
     height: auto;
     object-fit: fill;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.title{
-    background-color: #4a90e2;
-    margin-bottom: 30px;
-    font-family: monospace;
-}
-
-
-#main {
-    text-align:left;
-    grid-column: span 2 ; 
-    grid-row: span 2;
-    margin-top: 50px;
-    background-color: navy;
-    color: white;
-    padding-top: 50px;
-    padding-right: 100px;
-    padding-bottom: 50px;
-   padding-left: 80px;
-    
-}
-
-#right {
-    grid-column: 3;
-    grid-row: 3;
-    background-color: navy;
-}
-#concert{
-    width: 300px;
-    align-items: right ;
-    padding-top: 80px;
-}
-
-#previous {
-    grid-column: span 2;
-    margin-top: 70px;
-}
-.grid-item{
-    text-align: center;
-}
 
 #footer{
-        background-color: #F1F1F1;
+        background-color: rgb(6, 24, 69);
         text-align: center;
-        padding: 10px;
+        padding-bottom: 20%;
         grid-column: span 2;
+        margin-top: 30px;
+        color: white;
 }
 
+.Copyright{
+    background-color: black;
+   
+}
 
 
 /* Schedule */
@@ -193,6 +285,17 @@ h3, h4{
 img {
     width: auto;
     height: auto;
+}
+
+.event-registration{
+    background-color: #092139;
+    color: white;
+    padding: 30%;
+}
+#popup-content{
+    color: white;
+    background-color: #092139;
+    
 }
 
 /* Guest Section */
