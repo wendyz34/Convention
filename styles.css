@@ -15,8 +15,11 @@ body {
 .topnav {
     background-color: #4a90e2;
     overflow: hidden;
-    grid-column: span 3;
-    grid-row: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .topnav a {
@@ -33,11 +36,13 @@ body {
     background-color: #357abf;
 }
 
+
 /* Index Page */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto auto auto auto;
+    margin-top: 60px;
     /* gap: 10px; */
 }
 .grid-item{
@@ -214,6 +219,7 @@ body {
     width: 60%;
     background-color: white;
     margin: 20px;
+    margin-top: 60px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -290,7 +296,7 @@ img {
 .event-registration{
     background-color: #092139;
     color: white;
-    padding: 30%;
+    padding: 10%;
 }
 #popup-content{
     color: white;
@@ -305,6 +311,7 @@ table {
     border-style: inset;
     border-color: #96acd4;
     width: 100%;
+    margin-top: 60px;
 }
 
 th, td {
